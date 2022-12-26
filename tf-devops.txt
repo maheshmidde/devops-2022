@@ -1,0 +1,14 @@
+provider "aws" {
+  region = "us-east-2"
+  access_key = "AKIAYMAMZIQG2W2ZM5MM"
+  secret_key = "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"
+}
+resource "aws_instance" "maheshmidde" {
+  ami           = "ami-0a606d8395a538502"
+  instance_type = "t2.micro"
+           count = 5
+  tags = {
+    Name = "maheshmidde"
+
+  }
+}
